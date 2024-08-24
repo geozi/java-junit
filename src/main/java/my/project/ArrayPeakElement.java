@@ -5,9 +5,9 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Given an array arr of n elements that is first strictly
- * increasing and then maybe strictly decreasing, find the
- * maximum element in the array.
+ * Given an array arr of n elements, find the
+ * peak element in the array. The problem is
+ * a variation of a similar problem in geeksforgeeks.
  * @see <a href="https://www.geeksforgeeks.org/find-a-peak-in-a-given-array/">Find a peak element which is not smaller than its neighbours</a>
  */
 public class ArrayPeakElement {
