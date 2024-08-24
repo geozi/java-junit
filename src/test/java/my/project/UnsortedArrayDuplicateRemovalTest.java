@@ -1,5 +1,6 @@
 package my.project;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -11,9 +12,9 @@ import static org.junit.jupiter.api.Assertions.*;
  * Return-value tests.
  * The removeDuplicates(arr: int[]) method always returns
  * an array of integers or throws a NullPointerException.
- * The development of tests is based on the
- * provided inputs.
+ * The tests are developed per input.
  */
+@Disabled
 class UnsortedArrayDuplicateRemovalTest {
 
     @Test

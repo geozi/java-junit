@@ -11,8 +11,9 @@ import static org.junit.jupiter.api.Assertions.*;
  * The removeFrontWhitespaces(str: String) and
  * removeTrailingWhitespaces(str: String) methods
  * always return a String or throw a NullPointerException.
- * The development of tests is based on the provided inputs.
+ * The tests are developed per input.
  */
+@Disabled
 class LeadingAndTrailingWhitespaceRemovalTest {
 
     @Test

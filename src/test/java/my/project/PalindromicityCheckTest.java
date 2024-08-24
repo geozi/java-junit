@@ -13,9 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * Return-value tests.
  * The isPalindrome(str: String) method returns
  * true if a string is palindromic, false otherwise.
- * Thus, there need to be at least 2 tests to check for
- * each outcome. Any additional tests are developed based on
- * the different inputs.
+ * The tests are developed per outcome and per input.
  */
 class PalindromicityCheckTest {
 

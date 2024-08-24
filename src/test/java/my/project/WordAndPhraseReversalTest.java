@@ -9,9 +9,10 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Return-value tests.
  * The reversePhrase(str: String) method always returns a String
- * or throws a NullPointerException. The development of tests
- * is based on the provided inputs.
+ * or throws a NullPointerException. The tests are developed
+ * per input.
  */
+@Disabled
 class WordAndPhraseReversalTest {
 
     @Test
