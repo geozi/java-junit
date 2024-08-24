@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PalindromicityCheckTest {
 
     @Test
-    @DisplayName("Testing palindromicity: palindromic string")
+    @DisplayName("Testing isPalindrome(str: String): palindromic string")
     void checkWithPalindromicString() {
         // Arrange
         String str = "madam";
@@ -27,14 +27,14 @@ class PalindromicityCheckTest {
         boolean evalResult = PalindromicityCheck.isPalindrome(str);
 
         // Assert
-        assertAll( "Failure in testing palindromicity with a palindromic string",
+        assertAll( "Failure in testing isPalindrome(str: String) with a palindromic string",
                 () -> assertNotNull(str),
                 () -> assertTrue(evalResult)
         );
     }
 
     @Test
-    @DisplayName("Testing palindromicity: non-palindromic string")
+    @DisplayName("Testing isPalindrome(str: String): non-palindromic string")
     void checkWithNonPalindromicString() {
         // Arrange
         String str = "morning";
@@ -44,14 +44,14 @@ class PalindromicityCheckTest {
 
         // Assert
         assertAll(
-                "Failure in testing palindromicity with a non-palindromic string",
+                "Failure in testing isPalindrome(str: String) with a non-palindromic string",
                 () -> assertNotNull(str),
                 () -> assertFalse(evalResult)
         );
     }
 
     @Test
-    @DisplayName("Testing palindromicity: string with only whitespaces")
+    @DisplayName("Testing isPalindrome(str: String): string with only whitespaces")
     void checkWithOnlyWhiteSpacesString() {
         // Arrange
         String str = "    ";
@@ -61,21 +61,21 @@ class PalindromicityCheckTest {
 
         // Assert
         assertAll(
-                "Failure in testing palindromicity with only whitespaces",
+                "Failure in testing isPalindrome(str: String) with only whitespaces",
                 () -> assertNotNull(str),
                 () -> assertTrue(evalResult)
         );
     }
 
     @Test
-    @DisplayName("Testing palindromicity: null value")
+    @DisplayName("Testing isPalindrome(str: String): null value")
     void checkWithNullValue() {
         // Arrange
         String str = null;
 
         // Act and assert
         assertAll(
-                "Failure in testing palindromicity with a null value",
+                "Failure in testing isPalindrome(str: String) with a null value",
                 () -> assertThrows(NullPointerException.class, () -> {
                     boolean evalResult = PalindromicityCheck.isPalindrome(str);
                 })
@@ -84,7 +84,7 @@ class PalindromicityCheckTest {
     }
 
     @Test
-    @DisplayName("Testing palindromicity: empty string")
+    @DisplayName("Testing isPalindrome(str: String): empty string")
     void checkWithEmptyString() {
         // Arrange
         String str = "";
@@ -94,7 +94,7 @@ class PalindromicityCheckTest {
 
         // Act and assert
         assertAll(
-                "Failure in testing palindromicity with an empty string",
+                "Failure in testing isPalindrome(str: String) with an empty string",
                 () -> assertNotNull(str),
                 () -> assertFalse(evalResult)
         );

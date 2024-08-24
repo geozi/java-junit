@@ -12,11 +12,10 @@ import static org.junit.jupiter.api.Assertions.*;
  * or throws a NullPointerException. The tests are developed
  * per input.
  */
-@Disabled
 class WordAndPhraseReversalTest {
 
     @Test
-    @DisplayName("Testing string reversal: a string with letter characters")
+    @DisplayName("Testing reversePhrase(str: String): a string with letter characters")
     void reverseStringWithLetterCharacters() {
         // Arrange
         String str = "hello";
@@ -25,14 +24,14 @@ class WordAndPhraseReversalTest {
         String reversedStr = WordAndPhraseReversal.reversePhrase(str);
 
         // Assert
-        assertAll("Failure in reversing a string with letter characters",
+        assertAll("Failure in testing reversePhrase(str: String) with letter characters",
                 () -> assertNotNull(reversedStr),
                 () -> assertFalse(reversedStr.isEmpty()),
                 () -> assertEquals("olleh", reversedStr));
     }
 
     @Test
-    @DisplayName("Testing string reversal: a sequence of numbers")
+    @DisplayName("Testing reversePhrase(str: String): a sequence of numbers")
     void reverseStringWithNumberSequence() {
         // Arrange
         String str = "0123456789";
@@ -43,7 +42,7 @@ class WordAndPhraseReversalTest {
 
         // Assert
         assertAll(
-                "Failure in reversing string with numbers",
+                "Failure in testing reversePhrase(str: String) with numbers",
                 () -> assertNotNull(reversedStr),
                 () -> assertFalse(reversedStr.isEmpty()),
                 () -> assertEquals("9876543210", reversedStr)
@@ -51,7 +50,7 @@ class WordAndPhraseReversalTest {
     }
 
     @Test
-    @DisplayName( "Testing string reversal: string with letters and whitespaces")
+    @DisplayName( "Testing reversePhrase(str: String): string with letters and whitespaces")
     void reverseStringWithLettersAndWhitespaces() {
         // Arrange
         String str = "This is a phrase";
@@ -60,7 +59,7 @@ class WordAndPhraseReversalTest {
         String reversedStr = WordAndPhraseReversal.reversePhrase(str);
 
         // Assert
-        assertAll("Failure in reversing string with letters and whitespaces",
+        assertAll("Failure in testing reversePhrase(str: String) with letters and whitespaces",
                 () -> assertNotNull(reversedStr),
                 () -> assertFalse(reversedStr.isEmpty()),
                 () -> assertEquals("esarhp a si sihT", reversedStr)
@@ -69,7 +68,7 @@ class WordAndPhraseReversalTest {
     }
 
     @Test
-    @DisplayName("Testing string reversal: string with letters, whitespaces, and commas")
+    @DisplayName("Testing reversePhrase(str: String): string with letters, whitespaces, and commas")
     void reverseStringWithLettersWhitespacesAndCommas() {
         // Arrange
         String str = "This phrase, although not very big, has commas";
@@ -78,7 +77,7 @@ class WordAndPhraseReversalTest {
         String reversedStr = WordAndPhraseReversal.reversePhrase(str);
 
         // Assert
-        assertAll("Failure in reversing string with letters, whitespaces, and commas",
+        assertAll("Failure in testing reversePhrase(str: String) with letters, whitespaces, and commas",
                 () -> assertNotNull(reversedStr),
                 () -> assertFalse(reversedStr.isEmpty()),
                 () -> assertEquals("sammoc sah ,gib yrev ton hguohtla ,esarhp sihT", reversedStr)
@@ -86,7 +85,7 @@ class WordAndPhraseReversalTest {
     }
 
     @Test
-    @DisplayName("Testing string reversal: empty string")
+    @DisplayName("Testing reversePhrase(str: String): empty string")
     void reverseEmptyString() {
         // Arrange
         String str = "";
@@ -95,20 +94,20 @@ class WordAndPhraseReversalTest {
         String reversedStr = WordAndPhraseReversal.reversePhrase(str);
 
         // Assert
-        assertAll("Failure in reversing empty string",
+        assertAll("Failure in testing reversePhrase(str: String) with empty string",
                 () -> assertNotNull(reversedStr),
                 () -> assertTrue(reversedStr.isEmpty())
         );
     }
 
     @Test
-    @DisplayName("Testing string reversal: null")
+    @DisplayName("Testing reversePhrase(str: String): null value")
     void reverseNullString() {
         // Arrange
         String str = null;
 
         // Act and Assert
-        assertAll("Failure in reversing null string",
+        assertAll("Failure in testing reversePhrase(str: String) will null value",
                 () -> assertNull(str),
                 () -> assertThrows(NullPointerException.class, () -> {String reversedStr = WordAndPhraseReversal.reversePhrase(str);})
                 );

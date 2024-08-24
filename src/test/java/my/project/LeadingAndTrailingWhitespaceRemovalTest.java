@@ -13,11 +13,10 @@ import static org.junit.jupiter.api.Assertions.*;
  * always return a String or throw a NullPointerException.
  * The tests are developed per input.
  */
-@Disabled
 class LeadingAndTrailingWhitespaceRemovalTest {
 
     @Test
-    @DisplayName("Testing front whitespace removal: string with one front whitespace")
+    @DisplayName("Testing removeFrontWhitespaces(str: String): string with one front whitespace")
     void removeFrontWhitespace() {
         // Arrange
         String str = " morning";
@@ -27,7 +26,7 @@ class LeadingAndTrailingWhitespaceRemovalTest {
 
         // Assert
         assertAll(
-                "Failure in testing front whitespace removal with one whitespace",
+                "Failure in testing removeFrontWhitespaces(str: String) with one whitespace",
                 () -> assertNotNull(nwcStr),
                 () -> assertFalse(nwcStr.isEmpty()),
                 () -> assertEquals("morning", nwcStr)
@@ -35,7 +34,7 @@ class LeadingAndTrailingWhitespaceRemovalTest {
     }
 
     @Test
-    @DisplayName("Testing front whitespace removal: string with multiple front whitespaces")
+    @DisplayName("Testing removeFrontWhitespaces(str: String): string with multiple front whitespaces")
     void removeMultipleFrontWhitespaces() {
         // Arrange
         String str = "   afternoon";
@@ -45,7 +44,7 @@ class LeadingAndTrailingWhitespaceRemovalTest {
 
         // Assert
         assertAll(
-                "Failure in testing front whitespace removal with multiple whitespaces",
+                "Failure in testing removeFrontWhitespaces(str: String) with multiple whitespaces",
                 () -> assertNotNull(nwcStr),
                 () -> assertFalse(nwcStr.isEmpty()),
                 () -> assertEquals("afternoon", nwcStr)
@@ -53,7 +52,7 @@ class LeadingAndTrailingWhitespaceRemovalTest {
     }
 
     @Test
-    @DisplayName("Testing trailing whitespace removal: string with one trailing whitespace")
+    @DisplayName("Testing removeTrailingWhitespaces(str: String): string with one trailing whitespace")
     void removeTrailingWhitespace() {
         // Arrange
         String str ="word ";
@@ -63,7 +62,7 @@ class LeadingAndTrailingWhitespaceRemovalTest {
 
         // Assert
         assertAll(
-                "Failure in testing trailing whitespace removal with one whitespace",
+                "Failure in testing removeTrailingWhitespaces(str: String) with one whitespace",
                 () -> assertNotNull(nwcStr),
                 () -> assertFalse(nwcStr.isEmpty()),
                 () -> assertEquals("word", nwcStr)
@@ -71,7 +70,7 @@ class LeadingAndTrailingWhitespaceRemovalTest {
     }
 
     @Test
-    @DisplayName("Testing trailing whitespace removal: string with multiple trailing whitespaces")
+    @DisplayName("Testing removeTrailingWhitespaces(str: String): string with multiple trailing whitespaces")
     void removeMultipleTrailingWhitespaces() {
         // Arrange
         String str = "whitespaces   ";
@@ -81,7 +80,7 @@ class LeadingAndTrailingWhitespaceRemovalTest {
 
         // Assert
         assertAll(
-                "Failure in testing trailing whitespace removal with multiple whitespaces",
+                "Failure in testing removeTrailingWhitespaces(str: String) with multiple whitespaces",
                 () -> assertNotNull(nwcStr),
                 () -> assertFalse(nwcStr.isEmpty()),
                 () -> assertEquals("whitespaces", nwcStr)
@@ -89,7 +88,7 @@ class LeadingAndTrailingWhitespaceRemovalTest {
     }
 
     @Test
-    @DisplayName("Testing front and trailing whitespace removal: string with one front and one trailing whitespace")
+    @DisplayName("Testing removeFrontWhitespaces(str: String) and removeTrailingWhitespaces(str: String): string with one front and one trailing whitespace")
     void removeFrontAndTrailingWhitespace() {
         // Arrange
         String str = " phrase ";
@@ -100,7 +99,7 @@ class LeadingAndTrailingWhitespaceRemovalTest {
 
         // Assert
         assertAll(
-                "Failure in testing front and trailing whitespace removal with one front and one trailing whitespace",
+                "Failure in testing removeFrontWhitespaces(str: String) and removeTrailingWhitespaces(str: String) with one front and one trailing whitespace",
                 () -> assertNotNull(nwcStr),
                 () -> assertFalse(nwcStr.isEmpty()),
                 () -> assertEquals("phrase", nwcStr)
@@ -108,7 +107,7 @@ class LeadingAndTrailingWhitespaceRemovalTest {
     }
 
     @Test
-    @DisplayName("Testing front and trailing whitespace removal: string with multiple front and trailing whitespaces")
+    @DisplayName("Testing removeFrontWhitespaces(str: String) and removeTrailingWhitespaces(str: String): string with multiple front and trailing whitespaces")
     void removeMultipleFrontAndTrailingWhitespaces() {
         // Arrange
         String str = "   book   ";
@@ -119,7 +118,7 @@ class LeadingAndTrailingWhitespaceRemovalTest {
 
         // Assert
         assertAll(
-                "Failure in testing front and trailing whitespace removal with multiple front and trailing whitespaces",
+                "Failure in testing removeFrontWhitespaces(str: String) and removeTrailingWhitespaces(str: String) with multiple front and trailing whitespaces",
                 () -> assertNotNull(nwcStr),
                 () -> assertFalse(nwcStr.isEmpty()),
                 () -> assertEquals("book", nwcStr)
@@ -127,7 +126,7 @@ class LeadingAndTrailingWhitespaceRemovalTest {
     }
 
     @Test
-    @DisplayName("Testing front and trailing whitespace removal: string with one in-between whitespace")
+    @DisplayName("Testing removeFrontWhitespaces(str: String) and removeTrailingWhitespaces(str: String): string with one in-between whitespace")
     void removeInBetweenWhitespace() {
         // Arrange
         String str = " Hello World ";
@@ -138,7 +137,7 @@ class LeadingAndTrailingWhitespaceRemovalTest {
 
         // Assert
         assertAll(
-                "Failure in testing front and trailing whitespace removal with in-between whitespace",
+                "Failure in testing removeFrontWhitespaces(str: String) and removeTrailingWhitespaces(str: String) with in-between whitespace",
                 () -> assertNotNull(nwcStr),
                 () -> assertFalse(nwcStr.isEmpty()),
                 () -> assertEquals("Hello World", nwcStr)
@@ -146,7 +145,7 @@ class LeadingAndTrailingWhitespaceRemovalTest {
     }
 
     @Test
-    @DisplayName("Testing whitespace removal: string with only whitespaces")
+    @DisplayName("Testing removeFrontWhitespaces(str: String) and removeTrailingWhitespaces(str: String): string with only whitespaces")
     void removeWhitespacesFromStringWithOnlyWhitespaces() {
         // Arrange
         String str = "    ";
@@ -157,7 +156,7 @@ class LeadingAndTrailingWhitespaceRemovalTest {
 
         // Assert
         assertAll(
-                "Failure in testing whitespace removal with only whitespaces",
+                "Failure in testing removeFrontWhitespaces(str: String) and removeTrailingWhitespaces(str: String) with only whitespaces",
                 () -> assertNotNull(frontRemoval),
                 () -> assertNotNull(trailingRemoval),
                 () -> assertTrue(frontRemoval.isEmpty()),
@@ -167,7 +166,7 @@ class LeadingAndTrailingWhitespaceRemovalTest {
     }
 
     @Test
-    @DisplayName("Testing whitespace removal: empty string")
+    @DisplayName("Testing removeFrontWhitespaces(str: String) and removeTrailingWhitespaces(str: String): empty string")
     void removeWhitespacesFromEmptyString() {
         // Arrange
         String str = "";
@@ -178,7 +177,7 @@ class LeadingAndTrailingWhitespaceRemovalTest {
 
         // Assert
         assertAll(
-                "Failure in testing whitespace removal from empty string",
+                "Failure in testing removeFrontWhitespaces(str: String) and removeTrailingWhitespaces(str: String) from empty string",
                 () -> assertNotNull(frontRemoval),
                 () -> assertNotNull(trailingRemoval),
                 () -> assertTrue(frontRemoval.isEmpty()),
@@ -188,12 +187,12 @@ class LeadingAndTrailingWhitespaceRemovalTest {
     }
 
     @Test
-    @DisplayName("Testing whitespace removal: null")
+    @DisplayName("Testing removeFrontWhitespaces(str: String) and removeTrailingWhitespaces(str: String): null")
     void removeWhitespacesFromNullValue() {
         // Assert
 
         assertAll(
-                "Failure in testing whitespace removal from null value",
+                "Failure in testing removeFrontWhitespaces(str: String) and removeTrailingWhitespaces(str: String) from null value",
                 () -> assertThrows(NullPointerException.class, () -> {
                     String frontRemoval = LeadingAndTrailingWhitespaceRemoval.removeFrontWhitespaces(null);
                 }),

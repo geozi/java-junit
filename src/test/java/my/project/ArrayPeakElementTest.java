@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ArrayPeakElementTest {
 
     @Test
-    @DisplayName("Testing the findPeak(): unsorted list")
+    @DisplayName("Testing the findPeak(numbers: List<Integer>): unsorted list")
     void findPeakWithUnsortedList() {
         // Arrange
         List<Integer> numbers = new ArrayList<>(List.of(5, 10, 20, 15));
@@ -27,7 +27,7 @@ class ArrayPeakElementTest {
 
         // Assert
         assertAll(
-                "Failure in testing the findPeak() with unsorted list",
+                "Failure in testing the findPeak(numbers: List<Integer>) with unsorted list",
                 () -> assertNotNull(numbers),
                 () -> assertNotNull(peaks),
                 () -> assertEquals(1, peaks.length),
@@ -36,7 +36,7 @@ class ArrayPeakElementTest {
     }
 
     @Test
-    @DisplayName("Testing the findPeak(): unsorted list with multiple peaks")
+    @DisplayName("Testing the findPeak(numbers: List<Integer>): unsorted list with multiple peaks")
     void findPeakWithUnsortedMultiplePeakList() {
         // Arrange
         List<Integer> numbers = new ArrayList<>(List.of(10, 20, 15, 2, 23, 90, 67));
@@ -46,7 +46,7 @@ class ArrayPeakElementTest {
 
         // Assert
         assertAll(
-                "Failure in testing the findPeak() with multiple peaks",
+                "Failure in testing the findPeak(numbers: List<Integer>) with multiple peaks",
                 () -> assertNotNull(numbers),
                 () -> assertNotNull(peaks),
                 () -> assertEquals(2, peaks.length),
@@ -55,7 +55,7 @@ class ArrayPeakElementTest {
     }
 
     @Test
-    @DisplayName("Testing the findPeak(): sorted (asc) list")
+    @DisplayName("Testing the findPeak(numbers: List<Integer>): sorted (asc) list")
     void findPeakWithSortedAscList() {
         // Arrange
         List<Integer> numbers = new ArrayList<>(List.of(10, 20, 30, 40, 50));
@@ -65,7 +65,7 @@ class ArrayPeakElementTest {
 
         // Assert
         assertAll(
-                "Failure in testing the findPeak() with sorted (asc) list",
+                "Failure in testing the findPeak(numbers: List<Integer>) with sorted (asc) list",
                 () -> assertNotNull(numbers),
                 () -> assertNotNull(peaks),
                 () -> assertEquals(1, peaks.length),
@@ -74,7 +74,7 @@ class ArrayPeakElementTest {
     }
 
     @Test
-    @DisplayName("Testing the findPeak(): sorted (desc) list ")
+    @DisplayName("Testing the findPeak(numbers: List<Integer>): sorted (desc) list ")
     void findPeakWithSortedDescList() {
         // Arrange
         List<Integer> numbers = new ArrayList<>(List.of(100, 80, 60, 50, 20));
@@ -84,7 +84,7 @@ class ArrayPeakElementTest {
 
         // Assert
         assertAll(
-                "Failure in testing the findPeak() with sorted (desc) list",
+                "Failure in testing the findPeak(numbers: List<Integer>) with sorted (desc) list",
                 () -> assertNotNull(numbers),
                 () -> assertNotNull(peaks),
                 () -> assertEquals(1, peaks.length),
@@ -93,7 +93,7 @@ class ArrayPeakElementTest {
     }
 
     @Test
-    @DisplayName("Testing the findPeak(): same element list")
+    @DisplayName("Testing the findPeak(numbers: List<Integer>)): same element list")
     void findPeakWithSameElementList() {
         // Arrange
         List<Integer> numbers = new ArrayList<>(List.of(1,1,1,1,1,1,1));
@@ -103,7 +103,7 @@ class ArrayPeakElementTest {
 
         // Assert
         assertAll(
-                "Failure in testing the findPeak() with same element list",
+                "Failure in testing the findPeak(numbers: List<Integer>) with same element list",
                 () -> assertNotNull(numbers),
                 () -> assertNotNull(peaks),
                 () -> assertEquals(1, peaks.length),
@@ -112,14 +112,14 @@ class ArrayPeakElementTest {
     }
 
     @Test
-    @DisplayName("Testing the findPeak(): empty list")
+    @DisplayName("Testing the findPeak(numbers: List<Integer>): empty list")
     void findPeakWithEmptyList() {
         // Arrange
         List<Integer> numbers = new ArrayList<>();
 
         // Act and assert
         assertAll(
-                "Failure in testing the findPeak() with empty list",
+                "Failure in testing the findPeak(numbers: List<Integer>) with empty list",
                 () -> assertNotNull(numbers),
                 () -> assertThrows(IndexOutOfBoundsException.class, () -> {
                     int[] peaks = ArrayPeakElement.findPeak(numbers);
@@ -128,14 +128,14 @@ class ArrayPeakElementTest {
     }
 
     @Test
-    @DisplayName("Testing the findPeak(): null value")
+    @DisplayName("Testing the findPeak(numbers: List<Integer>): null value")
     void findPeakWithNullValue() {
         // Arrange
         List<Integer> numbers = null;
 
         // Act and assert
         assertAll(
-                "Failure in testing the findPeak() with null value",
+                "Failure in testing the findPeak(numbers: List<Integer>) with null value",
                 () -> assertNull(numbers),
                 () -> assertThrows(NullPointerException.class, () -> {
                     int[] peaks = ArrayPeakElement.findPeak(numbers);
