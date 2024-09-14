@@ -4,14 +4,14 @@ import java.util.Arrays;
 
 /**
  * The {@link UnsortedArrayDuplicateRemoval} class
- * contains a method for the removal of duplicate
- * numbers.
+ * contains a static method for the removal of duplicate
+ * integers from an unsorted array.
  */
 public class UnsortedArrayDuplicateRemoval {
 
     /**
-     * Removes duplicate numbers from a
-     * numerical array.
+     * Removes duplicate integers from an
+     * array of integers.
      * @param arr An array of integers.
      * @return An array of unique integers.
      */
